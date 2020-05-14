@@ -8,7 +8,9 @@ def home(request):
 
 from django.http import JsonResponse
 def home(request):
-    name = request.GET['name']
-    age = request.GET['age']
-    getRequestDict = request.GET;
-    return JsonResponse(getRequestDict)    
+    name01 = request.GET['name']
+    age02 = request.GET['age']
+    # getRequestDict = request.GET;
+    result= int(age02)+5
+    requestDict={'result_response':result}
+    return JsonResponse(requestDict)    
